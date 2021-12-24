@@ -21,6 +21,10 @@
     margin-left: 200px;
 }
 
+.responsive{
+    display: none;
+}
+
 .itemmenu{
     margin: 50px;
 }
@@ -43,6 +47,51 @@
 /*FINE MODIFICHE ALLA NAVBAR*/
 
 
+/*NAVBAR RESPONSIVE*/
+.contenitore{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+    color: white;
+    align-items: center;
+}
+
+.MainMenu{
+    display: flex;
+    list-style: none;
+}
+
+.MainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.MainMenu li a:hover{
+    background-color: orange;
+}
+
+.OpenMenu{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.closemenu, .icons i {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/*FINE NAV RESPONSIVE*/
+
 /*MODIFICHE AL BANNER SOTTO LA NAV*/
 .bannersottonav{
     margin-top: 30px;
@@ -60,6 +109,8 @@
     background-color: black;
     margin-bottom: 10px;
 }
+
+
 .macchinedisplay{
     display: flex;
     justify-content: space-between;
@@ -67,12 +118,12 @@
 }
 .autoinevidenza{
     height: 300px;
-    width: 450px;
+    width: 100%;
 }
 
 .ultimautoinevidenza{
     height: 300px;
-    width: 450px;
+    width: 100%;
 }
 
 
@@ -142,18 +193,38 @@
 
 @media screen and (max-width : 600px){
     .navbar{
-        width: 100%;
-        padding: 0;
-        display: flex;
-        align-items: center;
+       display: none;
     }
 
-    .titolo{
-        font-size: 30px;
+    /*INIZIO NAV RESPONSIVE*/
+
+    .responsive{display: block;}
+
+
+    @media(max-width:600px){
+        .MainMenu{height: 100vh; position: fixed; top: 0;right: 0; left: 0; z-index: 10;
+        flex-direction: column; justify-content: center; align-items: center; background-color:  white;
+        transition:  1s ease; display: none;}
     }
+    
+    .closemenu{display: block; position: absolute; top: 20px; right: 20px; color: black;}
+    
+    .OpenMenu{display: block; }
+    
+    .MainMenu li a{font-size: 25px;}
+    .MainMenu li a:hover{
+        color: lightskyblue;
+        background-color: rgb(245, 89, 89);
+        font-size: 1.6rem;
+    }
+    
+    .icons i{
+        display: inline-block;
+        padding: 12px;
+    }
+    
 
-    .navmenu{display: none;}
-
+    /*FINE NAVBAR RESPONSIVE*/
     .bannersottonav > h1{
         font-size: 20px;
     }
@@ -165,6 +236,8 @@
         width: 100%;
     }
 
+
+
     .macchinedisplay{
         display: flex;
         flex-direction: column;
@@ -173,13 +246,9 @@
 
     .autoinevidenza{
         margin-bottom: 120px;
-        width: 100%;
     }
 
     .ultimautoinevidenza{
-        width: 100%;
-        height: 300px;
-        width: 100%;
         margin-bottom: 5px;
     }
 
