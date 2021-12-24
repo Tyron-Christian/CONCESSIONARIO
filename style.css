@@ -71,11 +71,12 @@
 }
 
 .logo{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .MainMenu li a:hover{
-    background-color: orange;
+    background-color: red;
+    border-radius: 10px;
 }
 
 .OpenMenu{
@@ -88,6 +89,7 @@
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    color: white;
 }
 
 /*FINE NAV RESPONSIVE*/
@@ -201,7 +203,7 @@
     .responsive{display: block;}
 
 
-    @media(max-width:600px){
+    @media(max-width:800px){
         .MainMenu{height: 100vh; position: fixed; top: 0;right: 0; left: 0; z-index: 10;
         flex-direction: column; justify-content: center; align-items: center; background-color:  white;
         transition:  1s ease; display: none;}
@@ -210,12 +212,18 @@
     .closemenu{display: block; position: absolute; top: 20px; right: 20px; color: black;}
     
     .OpenMenu{display: block; }
+
+    .titoloclosemenu{
+        color: white;
+        font-size: 30px;
+        background-color: red;
+        color: white;
+        margin-bottom: 50px;
+    }
     
-    .MainMenu li a{font-size: 25px;}
+    .MainMenu li a{font-size: 18px;}
     .MainMenu li a:hover{
-        color: lightskyblue;
-        background-color: rgb(245, 89, 89);
-        font-size: 1.6rem;
+        font-size: 18px;
     }
     
     .icons i{
