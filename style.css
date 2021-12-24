@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+*{box-sizing: border-box; margin: 0; padding: 0; font-family: 'Fira sans', sans-serif;}
+
+/*INIZIO MODIFICHE ALLA NAVBAR*/
+
+.navbar{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+}
+
+
+.titolo{ color: white; margin-left: 22px; text-decoration: none;}
+
+.navmenu{
+    display: flex;
+    margin-left: 200px;
+}
+
+.itemmenu{
+    margin: 50px;
+}
+
+.itemmenu{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.itemmenu:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/*FINE MODIFICHE ALLA NAVBAR*/
+
+
+/*MODIFICHE AL BANNER SOTTO LA NAV*/
+.bannersottonav{
+    margin-top: 30px;
+    text-align: center;
+}
+/*FINE MODIFICHE BANNER SOTTO LA NAV*/
+
+/*INIZIO MODIFICHE AL BANNER AUTO IN EVIDENZA*/
+
+.affari{width: 100%; margin-top: 30px;}
+
+.affari > h2{
+    text-align: center;
+    color: whitesmoke;
+    background-color: black;
+    margin-bottom: 10px;
+}
+.macchinedisplay{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.autoinevidenza{
+    height: 300px;
+    width: 450px;
+}
+
+.ultimautoinevidenza{
+    height: 300px;
+    width: 450px;
+}
+
+
+.fotomacchina{
+    height: 100%;
+    width: 100%;
+}
+
+
+/*FINE BANNER AUTO IN EVIDENZA*/
+
+.bannertipo{
+    margin-top: 150px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+
+.schermopri{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxtipo{
+    margin-left: 22px;
+    margin-bottom: 10px;
+}
+
+
+.boxfoto{
+    height: 250px;
+    width: 400px;
+}
+
+.fototipo{width: 100%; height: 100%;}
+
+.descr{
+    text-align: center;
+}
+
+/*FINE DIV TIPOLOGIE DI AUTO*/
+
+/*INIZIO DEL FOOTER*/
+
+#footer{
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    margin-left: 22px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+
+/*INIZIO MEDIA SCREEN MAX 600PX*/
+
+@media screen and (max-width : 600px){
+    .navbar{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .titolo{
+        font-size: 30px;
+    }
+
+    .navmenu{display: none;}
+
+    .bannersottonav > h1{
+        font-size: 20px;
+    }
+
+    .affari{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .macchinedisplay{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .autoinevidenza{
+        margin-bottom: 120px;
+        width: 100%;
+    }
+
+    .ultimautoinevidenza{
+        width: 100%;
+        height: 300px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .boxtipo{margin-left: 0;}
+}
